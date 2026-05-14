@@ -2,16 +2,12 @@
 
 namespace Tests\StringUtils;
 
+require 'vendor/autoload.php';
+
+use Webmozart\Assert\Assert;
+
 use function App\StringUtils\capitalize;
 
-require 'src/StringUtils.php';
+Assert::eq(capitalize('hello'), 'Hello');
 
-if (capitalize('hello') !== 'Hello') {
-    throw new \Exception('Функция работает неверно!');
-}
-
-if (capitalize('') !== '') {
-    throw new \Exception('Функция работает неверно!');
-}
-
-echo 'Все тесты пройдены!';
+Assert::eq(capitalize(''), '');
