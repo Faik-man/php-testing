@@ -14,5 +14,8 @@
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^4.0"
+    },
+    "require": {
+        "webmozart/assert": "^2.3"
     }
 }
